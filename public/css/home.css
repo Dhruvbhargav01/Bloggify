@@ -1,0 +1,31 @@
+/* Blog List Page Styling */
+.blog-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f5f5dc;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(255,75,43,0.3);
+}
+
+.blog-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.blog-card .card-text {
+  font-size: 0.95rem;
+  color: #bbbbbb;
+}

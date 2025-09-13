@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <title>Add New Blog</title>
+  <link rel="stylesheet" href="/css/addBlog.css"> <!-- extra coded -->
+</head>
+
+<body>
+  <%- include("./partials/nav") %>
+
+  <div class="container mt-4">
+    <div class="card add-blog-card"> <!-- extra coded -->
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Create New Blog</h2> <!-- extra coded -->
+
+        <form action="/blog" method="post" enctype="multipart/form-data">
+
+          <div class="mb-3">
+            <label for="coverImage" class="form-label">Cover Image</label>
+            <input type="file" class="form-control" name="coverImage" id="coverImage" aria-describedby="coverImage" />
+          </div>
+
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" id="title" aria-describedby="title" />
+          </div>
+
+          <div class="mb-3">
+            <label for="body" class="form-label">Body</label>
+            <textarea name="body" class="form-control body-input" id="body" rows="6"></textarea> <!-- extra coded -->
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-primary">Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <%- include("./partials/script") %>
+</body>
+
+</html>

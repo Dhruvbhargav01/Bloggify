@@ -1,0 +1,31 @@
+/* Global Styles */
+body {
+  background-color: #0f0f0f;
+  color: #f5f5dc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+a {
+  color: #f5f5dc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff4b2b;
+}
+
+h1, h2, h3, h4 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}

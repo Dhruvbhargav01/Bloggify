@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm"> <!-- extra coded -->
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">AI Blog</a> <!-- extra coded -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown"> <!-- extra coded -->
+      <ul class="navbar-nav gap-3"> <!-- extra coded -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+
+        <% if (locals.user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog/add-new">Add Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dhruv Bhargav
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/user/logout">Log Out</a></li>
+            </ul>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/user/signin">Signin</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+
+    <div class="d-flex"> <!-- extra coded -->
+      <% if (!locals.user) { %>
+        <a href="/user/signup" class="btn btn-primary rounded-pill px-4">Create Account</a> <!-- extra coded -->
+      <% } %>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <% if (locals.error) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= locals.error %>
+    </div>
+  <% } %>
+</div>

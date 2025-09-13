@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <title>SignUp</title>
+  <!-- extra coded -->
+  <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+  <%- include("./partials/nav") %>
+
+  <div class="d-flex justify-content-center align-items-center vh-100"> <!-- extra coded -->
+    <div class="auth-card p-4 shadow-sm"> <!-- extra coded -->
+      <h2 class="text-center mb-4">Create Account</h2> <!-- extra coded -->
+
+      <form action="/user/signup" method="post">
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Full Name</label>
+          <input type="text" class="form-control rounded-pill" id="fullname" name="fullname"> <!-- extra coded -->
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"> <!-- extra coded -->
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control rounded-pill" id="exampleInputPassword1" name="password"> <!-- extra coded -->
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 rounded-pill">Sign Up</button> <!-- extra coded -->
+      </form>
+    </div>
+  </div>
+
+  <%- include("./partials/script") %>
+</body>
+
+</html>

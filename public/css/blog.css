@@ -1,0 +1,55 @@
+.blog-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.blog-cover {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #f5f5dc;
+}
+
+.blog-body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #bbbbbb;
+  margin-top: 1rem;
+}
+
+/* Comments */
+.comment-card {
+  background: #1f1f1f;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  color: #f5f5dc;
+  margin-bottom: 1rem;
+}
+
+.comment-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-text {
+  font-size: 0.95rem;
+  color: #cccccc;
+}

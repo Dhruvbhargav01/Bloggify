@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <title>Blog</title>
+  <!-- extra coded -->
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+
+<body>
+  <%- include("./partials/nav") %>
+
+  <div class="container mt-5">
+    <!-- Blog Header -->
+    <h1 class="blog-title mb-3"><%= blog.title %></h1> <!-- extra coded -->
+    <img src="<%= blog.coverImageURL %>" class="blog-cover mb-4" alt="Blog Cover"> <!-- extra coded -->
+
+    <!-- Author Info -->
+    <div class="d-flex align-items-center mb-5"> <!-- extra coded -->
+      <img src="<%= blog.createdBy.profileImageURL %>" class="author-img me-3" alt="Author"> <!-- extra coded -->
+      <span class="author-name"><%= blog.createdBy.fullname %></span> <!-- extra coded -->
+    </div>
+
+    <!-- Blog Body -->
+    <div class="blog-body"> <!-- extra coded -->
+      <%= blog.body %>
+    </div>
+  </div>
+
+  <!-- Comments Section -->
+  <div class="container mt-5">
+    <h2 class="mb-4">Comments (<%= comments.length %>)</h2>
+
+    <% if (locals.user) { %>
+      <form action="/blog/comment/<%= blog._id %>" method="post" class="d-flex gap-2 mb-4"> <!-- extra coded -->
+        <input type="text" class="form-control" name="content" placeholder="Enter your Comment" /> <!-- extra coded -->
+        <button class="btn btn-primary" type="submit">Add</button> <!-- extra coded -->
+      </form>
+    <% } %>
+
+    <div class="comment-list"> <!-- extra coded -->
+      <% comments.forEach(comment => { %>
+        <div class="comment-card d-flex align-items-start mb-3"> <!-- extra coded -->
+          <img src="<%= comment.createdBy.profileImageURL %>" class="comment-img me-3" alt="User"> <!-- extra coded -->
+          <div>
+            <div class="fw-bold"><%= comment.createdBy.fullname %></div>
+            <p class="comment-text mb-0"><%= comment.content %></p>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <%- include("./partials/script") %>
+</body>
+
+</html>
